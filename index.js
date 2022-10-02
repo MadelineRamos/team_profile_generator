@@ -1,10 +1,12 @@
+const { generateManagerCard, generateEngineersCard, generateInternsCard } = require('./dist/page-templates/cards');
+const generateHtml = require('./dist/page-templates/html');
 const inquirer = require('inquirer');
 inquirer.registerPrompt('loop', require('inquirer-loop')(inquirer));
 const fs = require('fs');
 
-const Manager = require("lib/Manager");
-const Engineer = require("lib/Engineer");
-const Intern = require("lib/Intern");
+const Manager = require("./lib/Manager");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 
 function init() {
     return inquirer
@@ -65,8 +67,8 @@ function init() {
                 name: 'internSchool',
                 message: 'What is the name of the employees school?',
                 when: (teamMember) => teamMember.employeeType === 'Intern'
-            }
-        ]
+            },
+        ],
       }
     ])
     .then(projectData => {
@@ -74,16 +76,15 @@ function init() {
         var engineers = [];
         var interns = [];
 
-        for(let i = 0; projectData.team.length; i++) {
-            var teamMember = projectData.team[i];
-            if (teamMember.employeeType === 'Engineer') {
-                var engineer = new Engineer(teamMember.employeeName, teamMember.employeeId, teamMember.employeeEmail, teamMember.githubUsername);
+        projectData.team.forEach(function(e) {
+            if (e.employeeType === "Engineer") {
+                const engineer = new Engineer(e.employeeName, e.employeeId, e.employeeEmail, e.githubUsername);
                 engineers.push(engineer);
-            } else if (teamMember.employeeType === 'Intern') {
-                var intern = new Intern(teamMember.employeeName, teamMember.employeeId, teamMember.employeeEmail, teamMember.internSchool);
+            } else if (e.employeeType === "Intern") {
+                const intern = new Intern(e.employeeName, e.employeeId, e.employeeEmail, e.internSchool);
                 interns.push(intern);
             }
-        }
+        });
 
         var managerCard = generateManagerCard(manager);
         var engineersCard = generateEngineersCard(engineers);
