@@ -1,32 +1,6 @@
 const Intern = require('../lib/Intern')
 
 describe('class: Intern', () => {
-    describe('properties', () => {
-        it('Has a name property that is a string' , () => {
-            const intern = new Intern('Madeline Ramos', 1, 'maddieeramos@gmail.com', 'UNC-Chapel Hill');
-            expect(intern.hasOwnProperty('name')).toBeTruthy();
-            expect(typeof intern.name).toBe('string');
-        });
-
-        it('Has an id property that is a number', () => {
-            const intern = new Intern('Madeline Ramos', 1, 'maddieeramos@gmail.com', 'UNC-Chapel Hill');
-            expect(intern.hasOwnProperty('id')).toBeTruthy();
-            expect(typeof intern.id).toBe('number');
-        });
-
-        it('Has an email property that is a string', () => {
-            const intern = new Intern('Madeline Ramos', 1, 'maddieeramos@gmail.com', 'UNC-Chapel Hill');
-            expect(intern.hasOwnProperty('email')).toBeTruthy();
-            expect(typeof intern.email).toBe('string');
-        });
-
-        it('Has a school property that is a string' , () => {
-            const intern = new Intern('Madeline Ramos', 1, 'maddieeramos@gmail.com', 'UNC-Chapel Hill');
-            expect(intern.hasOwnProperty('school')).toBeTruthy();
-            expect(typeof intern.school).toBe('string');
-        });
-    });
-
     describe('methods', () => {
         describe('getName', () => {
             it('Should return the name of the intern', () => {

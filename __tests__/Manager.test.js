@@ -1,32 +1,6 @@
 const Manager = require('../lib/Manager')
 
 describe('class: Manager', () => {
-    describe('properties', () => {
-        it('Has a name property that is a string' , () => {
-            const manager = new Manager('Madeline Ramos', 1, 'maddieeramos@gmail.com', 1);
-            expect(manager.hasOwnProperty('name')).toBeTruthy();
-            expect(typeof manager.name).toBe('string');
-        });
-
-        it('Has an id property that is a number', () => {
-            const manager = new Manager('Madeline Ramos', 1, 'maddieeramos@gmail.com', 1);
-            expect(manager.hasOwnProperty('id')).toBeTruthy();
-            expect(typeof manager.id).toBe('number');
-        });
-
-        it('Has an email property that is a string', () => {
-            const manager = new Manager('Madeline Ramos', 1, 'maddieeramos@gmail.com', 1);
-            expect(manager.hasOwnProperty('email')).toBeTruthy();
-            expect(typeof manager.email).toBe('string');
-        });
-
-        it('Has an officeNumber property that is a number' , () => {
-            const manager = new Manager('Madeline Ramos', 1, 'maddieeramos@gmail.com', 1);
-            expect(manager.hasOwnProperty('officeNumber')).toBeTruthy();
-            expect(typeof manager.officeNumber).toBe('number');
-        });
-    });
-
     describe('methods', () => {
         describe('getName', () => {
             it('Should return the name of the manager', () => {
