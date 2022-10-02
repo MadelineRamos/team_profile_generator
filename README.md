@@ -15,7 +15,7 @@ This application is used to generate a HTML file that displays new team member i
 - JavaScript
 - Inquirer
 - Jest
-- None.js
+- Node.js
 - HTML
 - CSS
 - Bootstrap
