@@ -4,9 +4,9 @@ const inquirer = require('inquirer');
 inquirer.registerPrompt('loop', require('inquirer-loop')(inquirer));
 const fs = require('fs');
 
-const Manager = require("./lib/Manager");
-const Engineer = require("./lib/Engineer");
-const Intern = require("./lib/Intern");
+const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
 
 function init() {
     return inquirer
@@ -77,10 +77,10 @@ function init() {
         var interns = [];
 
         projectData.team.forEach(function(e) {
-            if (e.employeeType === "Engineer") {
+            if (e.employeeType === 'Engineer') {
                 const engineer = new Engineer(e.employeeName, e.employeeId, e.employeeEmail, e.githubUsername);
                 engineers.push(engineer);
-            } else if (e.employeeType === "Intern") {
+            } else if (e.employeeType === 'Intern') {
                 const intern = new Intern(e.employeeName, e.employeeId, e.employeeEmail, e.internSchool);
                 interns.push(intern);
             }
