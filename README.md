@@ -24,18 +24,14 @@ This application is used to generate a HTML file that displays new team member i
 
 ## Walk-through of Application Video
 
-add link here
+https://drive.google.com/file/d/1OyBeqrPiHkLotQLijbrNBhMV2rkk-dXT/view
 
 ---
 
 ## Instructions
 
 1. Clone the main project to local computer.
-2. Using the command line, run tests using *npm run test* to make sure everything passes.
+2. Using the command line, run tests using *npm run test* to make sure everything passes. You can also run *npm test -- --verbose*, this will show all of the descriptions of each test once it is ran.
 3. Run application using *node index.js* in the command line.
 4. Answer all of the questions to generate a HTML file displaying all of the information.
 5. Open the HTML file in your browser window to see all of the information displayed and stylized.
-
-
-
-

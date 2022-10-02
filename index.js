@@ -14,22 +14,22 @@ function init() {
       {
         type: 'input',
         name: 'managerName',
-        message: 'What is your name?',
+        message: "What is the manager's name?",
       },
       {
         type: 'input',
         name: 'id',
-        message: 'What is your employee ID?',
+        message: "What is the manager's employee ID number?",
       },
       {
         type: 'input',
         name: 'email',
-        message: 'What is your email address?',
+        message: "What is the manager's email address?",
       },
       {
         type: 'input',
         name: 'officeNumber',
-        message: 'What is your office number?',
+        message: "What is the manager's office number?",
       },
       {
         type: 'loop',
@@ -48,13 +48,14 @@ function init() {
             },
             {
                 type: 'input',
-                name: 'employeeEmail',
-                message: 'What is the employees email address?',
+                name: 'employeeName',
+                message: 'What is the employees name?',
+
             },
             {
                 type: 'input',
-                name: 'employeeName',
-                message: 'What is the employees name?',
+                name: 'employeeEmail',
+                message: 'What is the employees email address?',
             },
             {
                 type: 'input',
